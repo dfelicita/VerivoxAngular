@@ -1,0 +1,21 @@
+<div class="card">
+    <span class="rank">{{specs.rank}}</span>
+    <span class="name">{{specs.product.content.text}}</span>
+    <span class="speed">
+        <ul>
+            <li class="downCaption">Download</li>
+            <li class="down"><i>↓</i><span>{{specs.contractTerm.downloadSpeed.amount | shortNumber}}</span></li>
+            <li class="upCaption">Upload</li>
+            <li class="up"><i>↑</i><span>{{specs.contractTerm.uploadSpeed.amount | shortNumber}}</span></li>
+        </ul>
+    </span>
+    <span class="benefit">
+        <ul>
+            <li *ngFor="let item of specs.remarks">{{item.caption.text}}</li>
+        </ul>
+    </span>
+    <span class="cost">
+        <span class="amount">{{specs.cost.effectiveCost.content.text}}</span>
+        <span class="button"><a href="{{promoUrl}}" target="_blank" class="link">To tariff ></a></span>
+    </span>
+</div>

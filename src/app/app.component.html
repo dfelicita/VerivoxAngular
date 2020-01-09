@@ -1,0 +1,4 @@
+<div class="loader" *ngIf="loading === true"></div>
+<div *ngIf="loading === false" class="container">
+  <app-card *ngFor="let item of serviceList" [specs]="item"></app-card>
+</div>
